@@ -13,7 +13,7 @@ var spotifyApi = new SpotifyWebApi({
 
 // CONSEGUIR EL TOKEN DE ACCESO
 
-// router.get('/', (req, res, next) => {
+// app.get('/', (req, res, next) => {
 //     res.redirect(spotifyApi.createAuthorizeURL([
 //         "ugc-image-upload",
 //         "user-read-recently-played",
@@ -37,15 +37,13 @@ var spotifyApi = new SpotifyWebApi({
 //     ]))
 // })
 
-// app.use('/', router);
-
-// router.get('/callback', (req, res, next) => {
+// app.get('/callback', (req, res, next) => {
 //     console.log('reqquery', req.query)
 //     const code = req.query.code
 //     console.log(code)
-//     spotifyApi.authorizationCodeGrant(req.query.code).then((response) => {
+//     spotifyApi.authorizationCodeGrant(code).then((response) => {
 //         console.log(response);
-//         res.send(JSON.stringify(response))
+//         res.send(JSON.stringify(response.body.access_token))
 //     })
 // })
 
